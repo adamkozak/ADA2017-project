@@ -1,4 +1,3 @@
 # ADA2017-project
 
-Test for making changes
-- Tarmo
+Repo for ADA course homework and project
