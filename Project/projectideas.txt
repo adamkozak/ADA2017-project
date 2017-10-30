@@ -1,0 +1,11 @@
+project ideas
+
+Amazon data set
+
+emotional analysis of comments
+length of review
+correlation of time series with author, category
+correlation of time series with sentiment analysis
+connecting emotional analysis of type of product
+seeing segregation and echo chambers in time evolution
+connecting commenters over time
