@@ -48,10 +48,18 @@ of the reviewer (to analyse the time evolution of the reviews for a particular u
 
 # A list of internal milestones up until project milestone 2
 
-Add here a sketch of your planning for the next project milestone.
+1. Get familiar with the data
+
+2. Learn how to use the IC faculty cluster in order to perform basic statistics
+
+3. Learn the basics of Hadoop/Spark/the best tool for the task
+
+4. After getting familiar with the data, try to pick the project goal or
+goals that are the most feasible and have the possibility of generating
+interesting results
 
 
 
 # Questions for TAa
 
-Add here some questions you have for us, in general or project-specific.
+What would be the best tools for handling and analyzing the Amazon data set?
