@@ -60,6 +60,5 @@ interesting results
 
 
 
-# Questions for TAa
-
+# Questions for TAs
 What would be the best tools for handling and analyzing the Amazon data set?
