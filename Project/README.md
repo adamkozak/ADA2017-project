@@ -1,4 +1,4 @@
-# Analysis of reviews of books on Amazon
+﻿# Analysis of reviews of books on Amazon
 
 # Abstract
 The goal of the project is to analyze the reviews of books in the [Amazon dataset](http://jmcauley.ucsd.edu/data/amazon/).
@@ -6,7 +6,7 @@ Three exact goals are considered. The first goal idea is to analyze whether a pa
 in reviews (length of review, number of reviews) can be linked to a particular author,
 author group or genre. The second goal is to analyze the tone and the emotions carried by the
 comments and to see if certain authors, groups or genres attract certain emotions. The analysis
-will probably be realized using an external emotion recognition tools for text. The third goal
+will probably be realized using external emotion recognition tools for text. The third goal
 is to relate the emotion analysis to time, to see whether review tones change over time and if the
 increase in popularity and accessibility of the internet has contributed to changes in commenter
 behavior or polarization of comments. The story we would like to tell is to show something interesting
@@ -36,7 +36,7 @@ will only use the reviews related to the “Books” category. The dataset will 
 very big (more than 140 million reviews in total, of which a significant portion are book
 reviews) so we will use [Apache™ Hadoop®](http://hadoop.apache.org/), [Apache Spark™](https://spark.apache.org/) (or similar) to handle it on the computing cluster. The data
 is in JSON format so it should be easy to handle (not strict JSON but can be read with Python). 
-Nothing is said about where the reviews come from. This is important information for analysis,
+Nothing is said about which country the reviews come from. This is important information for analysis,
 so in the absence of exact information we will assume that the data is from Amazon in the United
 States (since it is hosted on the University of California San Diego website, the data includes
 reviews from the 1990’s, and it is not stated otherwise in the data description). In any case,
@@ -54,7 +54,7 @@ of the reviewer (to analyse the time evolution of the reviews for a particular u
 
 - [ ] Learn the basics of Hadoop/Spark/the best tool for the task
 
-- [ ] Do a reaserch and find the best frameworks for text processing/sentiment analysis
+- [ ] Find the best frameworks for text processing/sentiment analysis
 
 - [ ] After getting familiar with the data, try to pick the project goal or
 goals that are the most feasible and have the possibility of generating
