@@ -60,6 +60,13 @@ of the reviewer (to analyse the time evolution of the reviews for a particular u
 goals that are the most feasible and have the possibility of generating
 interesting results
 
+- [ ] Create a IPython notebook for the project pipeline
+
+- [ ] Access the dataset and perform the necessary statistics tasks
+
+- [ ] Update the ReadMe description according to decisions made in the course of data analysis
+
+- [ ] Organize the work/create a roadmap for next milestones (report/data story and presentation)
 
 
 # Questions for TAs
