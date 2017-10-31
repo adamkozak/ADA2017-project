@@ -19,8 +19,11 @@ on the internet.
 # Research questions
 
 Can we find a similar pattern in the reviews of every book of the same author or the same type?
+
 Can we find similar emotions in the reviews of every book of the same author or the same type? 
+
 Can we find an interesting progression in the reviews over time?
+
 Can we see emergence or disappearance of people who write highly polarized comments during the time frame?
 
 
