@@ -61,7 +61,7 @@ We also want to group books into categories based on the general sentiment towar
 
 |  | High average rating | Low average rating |
 | :---: | :---: | :---: |
-| **Low rating variance ** | Good book | Bad book |
+| **Low rating variance** | Good book | Bad book |
 | **High rating variance** | Controversial book | Controversial book |
 
 Controversial books can be further separated into positive controversial and negative controversial if necessary. Also, not all books need to go in one of these categories: if some books don't fit in any category, we can assign them to the category "neutral books".
