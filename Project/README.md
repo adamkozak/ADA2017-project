@@ -25,7 +25,7 @@ To handle the data, we use [Apache Spark™](https://spark.apache.org/). The dat
 
 We assume that the data is from Amazon in the United States, and that the reviews are in English.
 
-To enrich the data set, we wanted to also get the categories (science fiction, thriller, etc.) for each book. This was done by scraping the Amazon website "product details" section for each product. Since we cannot process huge numbers of products this way, we have thus far limited our enrichment attention to most interesting books (ones having high numbers of reviews, for example).
+**To enrich the data set**, we wanted to also get the categories (science fiction, thriller, etc.) and keywords for each book. This was done by scraping the Amazon website "product details" section for each product. Since we cannot process huge numbers of products this way, we have thus far limited our enrichment attention to most interesting books (ones having high numbers of reviews, for example).
 
 
 # Milestone 2
@@ -61,7 +61,7 @@ We also want to group books into categories based on the general sentiment towar
 
 |  | High average rating | Low average rating |
 | :---: | :---: | :---: |
-| **Low rating variance ** | Good book | Bad book |
+| **Low rating variance** | Good book | Bad book |
 | **High rating variance** | Controversial book | Controversial book |
 
 Controversial books can be further separated into positive controversial and negative controversial if necessary. Also, not all books need to go in one of these categories: if some books don't fit in any category, we can assign them to the category "neutral books".
@@ -76,6 +76,14 @@ We have decided to use the [VADER sentiment analysis toolkit](https://github.com
 
 
 # Updated research questions
+
+## Intermediate questions on the way to major questions:
+
++ What ratings indicate that a book is good or bad?
+  * Relating rating to sentiment of review
+
++ Is there a discrepancy between a rating and its associated review's sentiment?
+  * Do people give good ratings even though their comment is negative?
 
 ## Major questions:
 
@@ -101,12 +109,12 @@ We have decided to use the [VADER sentiment analysis toolkit](https://github.com
 - [x] Get familiar with the data
 
 - [ ] Learn how to use the IC faculty cluster in order to perform basic statistics
- - Not fulfilled, since for now running Spark locally is sufficient
+  * Not fulfilled, since for now running Spark locally is sufficient
 
 - [x] Learn the basics of Hadoop/Spark/the best tool for the task
 
 - [x] Find the best frameworks for text processing/sentiment analysis
- - VADER was decided upon since it is a complete package and provides one comparable score
+  * VADER was decided upon since it is a complete package and provides one comparable score
 
 - [x] After getting familiar with the data, try to pick the project goal or
 goals that are the most feasible and have the possibility of generating
@@ -133,9 +141,9 @@ interesting results
 - [ ] Find the best way to use VADER to analyze positivity and negativity of reviews
 
 - [ ] Calculate correlations between popularity metrics and positive and negative reviews and ratings
- - With respect to time
- - By aggregation by category (good, bad, controversial)
- - By aggregation by genre and author
+  * With respect to time
+  * By aggregation by category (good, bad, controversial)
+  * By aggregation by genre and author
 
 - [ ] If necessary, run analysis on the cluster
 
