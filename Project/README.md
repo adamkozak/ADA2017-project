@@ -4,7 +4,9 @@ Nathalie Crevoisier, Adam Kozak, Tarmo Nurmi
 
 # Updates for milestone 2:
 
-+ Dataset description modified
++ Abstract and dataset description modified
+
++ Research questions and internal milestones updated
 
 + Milestone 2 section added, where progress is described
 
@@ -12,10 +14,7 @@ Nathalie Crevoisier, Adam Kozak, Tarmo Nurmi
 
 
 # Abstract
-The goal of the project is to analyze the reviews of books in the [Amazon dataset](http://jmcauley.ucsd.edu/data/amazon/).
-Three exact goals are considered. The first goal idea is to analyze whether a pattern
-in reviews (length of review, number of reviews) can be linked to a particular author,
-author group or genre. The second goal is to analyze the tone and the emotions carried by the comments and to see if certain authors, groups or genres attract certain emotions. The analysis will probably be realized using external emotion recognition tools for text. The third goal is to relate the emotion analysis to time, to see whether review tones change over time and if the increase in popularity and accessibility of the internet has contributed to changes in commenter behavior or polarization of comments. The story we would like to tell is to show something interesting about Amazon comments from the 1990’s to the 2010’s, motivated by our interest in behavior of people on the internet.
+The goal of the project is to analyze the reviews of books in the [Amazon dataset](http://jmcauley.ucsd.edu/data/amazon/). The main research questions are: _How can negativeness or positiveness of reviews and ratings influence the popularity of a book? How do negative and positive reviews and ratings evolve with time?_ Here, the popularity of a book is defined as the total number of reviews (time-independent popularity) or the number of reviews accrued in a unit of time (time-dependent popularity). The goal is therefore to investigate the interplay between the popularity of a book and the sentiment expressed by the reviewer in his/her review and rating, aggregated according to various grouping categories (good/bad/controverisal books, books of a certain genre, etc.) and time. To find the category definitions, different ways of determining book "goodness" are considered. For sentiment analysis, a sentence-based positive/negative classifier is used. To enrich the dataset, the Amazon website is scraped for additional information on the books under consideration.
 
 
 # Dataset
@@ -26,7 +25,7 @@ To handle the data, we use [Apache Spark™](https://spark.apache.org/). The dat
 
 We assume that the data is from Amazon in the United States, and that the reviews are in English.
 
-**To enrich the data set**, we wanted to also get the categories (science fiction, thriller, etc.) and keywords for each book. This was done by scraping the Amazon website "product details" section for each product. Since we cannot process huge numbers of products this way, we have thus far limited our enrichment attention to most interesting books (ones having high numbers of reviews, for example).
+**To enrich the data set**, we wanted to also get the categories (science fiction, thriller, etc.) and keywords for each book. This was done by scraping the Amazon website "product details" section for each product. Since we cannot process huge numbers of products this way, we have thus far limited our enrichment attention to most interesting books (ones having high numbers of reviews, for example). _(See Amazon scraper.ipynb notebook.)_
 
 
 # Milestone 2
@@ -73,7 +72,7 @@ Grouping by general sentiment is not the only category grouping we have consider
 
 ## Review negativity and positivity
 
-We have decided to use the [VADER sentiment analysis toolkit](https://github.com/cjhutto/vaderSentiment) to analyze the positivity and negativity of the text in reviews. VADER gives a compound score between -1 and 1 for a sentence, where -1 is as negative and 1 is as positive as possible. Our interest is to look at the distributions of the valence scores, repeat to them the analysis done on the star ratings, and to see if there are surprising results when connecting them to the ratings.
+We have decided to use the [VADER sentiment analysis toolkit](https://github.com/cjhutto/vaderSentiment) to analyze the positivity and negativity of the text in reviews. VADER gives a compound score between -1 and 1 for a sentence, where -1 is as negative and 1 is as positive as possible. Our interest is to look at the distributions of the compound scores, repeat to them the analysis done on the star ratings, and to see if there are surprising results when connecting them to the ratings.
 
 
 # Updated research questions
