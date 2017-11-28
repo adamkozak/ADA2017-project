@@ -77,6 +77,14 @@ We have decided to use the [VADER sentiment analysis toolkit](https://github.com
 
 # Updated research questions
 
+## Intermediate questions on the way to major questions:
+
++ What ratings indicate that a book is good or bad?
+ - Relating rating to sentiment of review
+
++ Is there a discrepancy between a rating and its associated review's sentiment?
+ - Do people give good ratings even though their comment is negative?
+
 ## Major questions:
 
 + How can negativeness or positiveness of reviews and ratings influence the popularity of a book?
