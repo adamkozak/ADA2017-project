@@ -25,7 +25,7 @@ To handle the data, we use [Apache Spark™](https://spark.apache.org/). The dat
 
 We assume that the data is from Amazon in the United States, and that the reviews are in English.
 
-To enrich the data set, we wanted to also get the categories (science fiction, thriller, etc.) for each book. This was done by scraping the Amazon website "product details" section for each product. Since we cannot process huge numbers of products this way, we have thus far limited our enrichment attention to most interesting books (ones having high numbers of reviews, for example).
+**To enrich the data set**, we wanted to also get the categories (science fiction, thriller, etc.) and keywords for each book. This was done by scraping the Amazon website "product details" section for each product. Since we cannot process huge numbers of products this way, we have thus far limited our enrichment attention to most interesting books (ones having high numbers of reviews, for example).
 
 
 # Milestone 2
