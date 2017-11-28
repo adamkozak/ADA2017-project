@@ -1,55 +1,52 @@
 ﻿# Analysis of reviews of books on Amazon
 
+
+# Updates for milestone 2:
+
++ Dataset description modified
+
++ Milestone 2 section added, where progress is described
+
++ The data pipeline notebook is **Data_processing_CLEAN.ipynb**
+
+
 # Abstract
 The goal of the project is to analyze the reviews of books in the [Amazon dataset](http://jmcauley.ucsd.edu/data/amazon/).
 Three exact goals are considered. The first goal idea is to analyze whether a pattern
 in reviews (length of review, number of reviews) can be linked to a particular author,
-author group or genre. The second goal is to analyze the tone and the emotions carried by the
-comments and to see if certain authors, groups or genres attract certain emotions. The analysis
-will probably be realized using external emotion recognition tools for text. The third goal
-is to relate the emotion analysis to time, to see whether review tones change over time and if the
-increase in popularity and accessibility of the internet has contributed to changes in commenter
-behavior or polarization of comments. The story we would like to tell is to show something interesting
-about Amazon comments from the 1990’s to the 2010’s, motivated by our interest in behavior of people
-on the internet.
-
-
-
-
-# Research questions
-
-+ Can we find a similar pattern in the reviews of every book of the same author or the same type?
-
-+ Can we find similar emotions in the reviews of every book of the same author or the same type?
-
-+ Can we find an interesting progression in the reviews over time?
-
-+ Can we see emergence or disappearance of people who write highly polarized comments during the time frame?
-
-
+author group or genre. The second goal is to analyze the tone and the emotions carried by the comments and to see if certain authors, groups or genres attract certain emotions. The analysis will probably be realized using external emotion recognition tools for text. The third goal is to relate the emotion analysis to time, to see whether review tones change over time and if the increase in popularity and accessibility of the internet has contributed to changes in commenter behavior or polarization of comments. The story we would like to tell is to show something interesting about Amazon comments from the 1990’s to the 2010’s, motivated by our interest in behavior of people on the internet.
 
 
 # Dataset
 
-The dataset we will use is the [Amazon dataset](http://jmcauley.ucsd.edu/data/amazon/), and as it is very big we
-will only use the reviews related to the “Books” category. The dataset will still be
-very big (more than 140 million reviews in total, of which a significant portion are book
-reviews) so we will use [Apache™ Hadoop®](http://hadoop.apache.org/), [Apache Spark™](https://spark.apache.org/) (or similar) to handle it on the computing cluster. The data
-is in JSON format so it should be easy to handle (not strict JSON but can be read with Python).
-Nothing is said about which country the reviews come from. This is important information for analysis,
-so in the absence of exact information we will assume that the data is from Amazon in the United
-States (since it is hosted on the University of California San Diego website, the data includes
-reviews from the 1990’s, and it is not stated otherwise in the data description). In any case,
-for the analysis we assume that (nearly) all comments are in English.
-For the first two analyses we will need to use the text of the review and the ID of the product
-(book) reviewed and for the last one we will need to use the date of the review and also the ID
-of the reviewer (to analyse the time evolution of the reviews for a particular user).
+The dataset we will use is the [Amazon dataset](http://jmcauley.ucsd.edu/data/amazon/), and there we will analyze the _Books_ category. Since our goal is to analyze review and rating data of books, we will use the _5-core_ subset of book review data, which contains only products which have at least 5 reviews. This is a choice to remove noise in the data and make statistics (mean rating etc.) more sensible. The _5-core_ data contains 8,898,041 reviews of 367,983 books, and each review has an associated star rating (1-5 stars). Additionally, we will use the _Books_ metadata from the same website, which includes metadata of the books in the review data set. In the review data, books are identified by their Amazon identifier number (asin), and the metadata describes e.g. the actual book title, price, and so on.
+
+To handle the data, we use [Apache Spark™](https://spark.apache.org/). The data is in JSON format readable in Python. Since the data set is ~10 gigabytes, we can handle it by running Spark locally.
+
+We assume that the data is from Amazon in the United States, and that the reviews are in English.
+
+To enrich the data set, we wanted to also get the categories (science fiction, thriller, etc.) for each book. This was done by scraping the Amazon website "product details" section for each product. Since we cannot process huge numbers of products this way, we have thus far limited our enrichment attention to most interesting books (ones having high numbers of reviews, for example).
+
 
 # Milestone 2
 
-We have chosen our main questions (for now) to be:
+## Data poking
 
-_How can negativeness or positiveness of comments and ratings influence the popularity of a book? How do negative and positive comments and ratings evolve with time?_
+We have poked the data by various means, looking at e.g.
+
++ Mean length of reviews by month, day and book
+
++ Number of reviews by month and day (for all books and top 30 books according to number of reviews), and by book
+
++ Number of 1, 2, 3, 4, and 5-star ratings by book, and mean rating by book
+
+The exact results and visualizations can be found in the project pipeline notebook. Importantly, we found that the rate of reviewing is very unevenly distributed, with a lot more reviews being written after approximately 2013 than before, and that the distribution of mean ratings is heavily left-skewed (meaning a lot of the distribution mass is on the high ratings of 4 and 5).
+
+## Refined question definition
+
+After our data poking, we have chosen our main questions (for now) to be:
+
+_How can negativeness or positiveness of reviews and ratings influence the popularity of a book? How do negative and positive reviews and ratings evolve with time?_
 
 To this end, we need to define the "popularity" of a book.
 We decided on two different definitions for a popularity metric:
@@ -57,20 +54,44 @@ We decided on two different definitions for a popularity metric:
 1. Time-independent popularity: the number of reviews at the end of the dataset time period (July 2014)
 2. Time-dependent popularity: the number of reviews at the end of the dataset time period, divided by the number of months between the first review in the dataset and the end of the dataset period
 
-The metrics are based on the idea that a "popular" book will accrue lots of reviews, and an "unpopular" one will not.
+The metrics are based on the idea that a "popular" book will accrue lots of reviews, and an "unpopular" one will not. therefore, there is no judgment of the quality or goodness of the book by this notion of popularity.
 Metric 1 just looks at the number of reviews gathered between May 1996 and July 2014, and therefore favors older books that were pubished earlier (since they will hav ehad more time to accrue reviews.) By contrast, metric 2 favors newer books, since the rate of commenting on books on Amazon is higher the closer we are to the present day in time (because of internet accessibility, etc.).
 
-We also want to group books based on the general sentiment towards them. For this, we use the Amazon star ratings (1-5, rating and review are always given together). We label the books as "good", "bad" or "controversial" as follows:
+We also want to group books into categories based on the general sentiment towards them. For this, we use the Amazon star ratings (1-5 stars, a rating and a review are always given together). We label the books as "good", "bad" or "controversial" as follows:
 
 |  | High average rating | Low average rating |
 | :---: | :---: | :---: |
 | **Low rating variance ** | Good book | Bad book |
 | **High rating variance** | Controversial book | Controversial book |
 
-Controversial books can be further separated into positive controversial and negative controversial if necessary.
+Controversial books can be further separated into positive controversial and negative controversial if necessary. Also, not all books need to go in one of these categories: if some books don't fit in any category, we can assign them to the category "neutral books".
+
+To determine book category, we need the notion of "high" and "low" rating. Since the mean rating distribution is left-skewed, 3 does not represent the average rating in this data. Here we observe the same phenomenon as in movie or video game ratings: most products that make it to publishing aren't objectively too horrible, so mean ratings are quite high. In the context of this data set, an objectively _okay_ book can be _bad_ with respect to the other books. Therefore, we have decided to determine goodness of the mean rating by splitting the data according to percentiles: the ratings below the 25th percentile are _low_, the ratings above the 75th percentile are _high_, and the middle 50 % are _neutral_ (these percentile values are likely to change as we look more into the data).
+
+Grouping by general sentiment is not the only category grouping we have considered. Another grouping could be based on the speed by which the rate of receiving new reviews becomes small. If a book is a "fad", then it will be very popular for a short while and then forgotten, whereas more consistently popular books will receive reviews for a long time. This grouping is based on our observation while data poking: when a book is published, it will receive lots of reviews, and the review rate will slow down at different pace for different books. We will investigate this temporal behavior to see if interesting inferences can be made.
+
+## Review negativity and positivity
+
+We have decided to use the [VADER sentiment analysis toolkit](https://github.com/cjhutto/vaderSentiment) to analyze the positivity and negativity of the text in reviews. VADER gives a compound score between -1 and 1 for a sentence, where -1 is as negative and 1 is as positive as possible. Our interest is to look at the distributions of the valence scores, repeat to them the analysis done on the star ratings, and to see if there are surprising results when connecting them to the ratings.
 
 
+# Updated research questions
 
+## Major questions:
+
++ How can negativeness or positiveness of reviews and ratings influence the popularity of a book?
+
++ How do negative and positive reviews and ratings evolve with time?
+
++ Can we see a snowball effect in reviews and ratings?
+
+## Minor supporting questions:
+
++ Can we find similar ratings in the reviews of every book of the same author or the same type (genre)?
+
++ Can we find an interesting progression in the reviews and ratings over time?
+
++ Can we see emergence or disappearance of people who write highly polarized comments during the time frame?
 
 
 # A list of internal milestones
@@ -80,10 +101,12 @@ Controversial books can be further separated into positive controversial and neg
 - [x] Get familiar with the data
 
 - [ ] Learn how to use the IC faculty cluster in order to perform basic statistics
+ - Not fulfilled, since for now running Spark locally is sufficient
 
 - [x] Learn the basics of Hadoop/Spark/the best tool for the task
 
-- [ ] Find the best frameworks for text processing/sentiment analysis
+- [x] Find the best frameworks for text processing/sentiment analysis
+ - VADER was decided upon since it is a complete package and provides one comparable score
 
 - [x] After getting familiar with the data, try to pick the project goal or
 goals that are the most feasible and have the possibility of generating
@@ -91,19 +114,41 @@ interesting results
 
 - [x] Create a IPython notebook for the project pipeline
 
-- [ ] Access the dataset and perform the necessary statistics tasks
+- [x] Access the dataset and perform the necessary statistics tasks
 
-- [ ] Update the ReadMe description according to decisions made in the course of data analysis
+- [x] Update the ReadMe description according to decisions made in the course of data analysis
 
-- [ ] Organize the work/create a roadmap for next milestones (report/data story and presentation)
+- [x] Organize the work/create a roadmap for next milestones (report/data story and presentation)
 
-## Up until milestone 3:
-- [ ] TBD
+## Up until milestone 3 (report):
 
+- [ ] Decide all models of grouping data into categories (negative/positive, fast/slow plateauing of review numbers, etc.)
 
-# Questions for TAs
-+ What would be the best tools for handling and analyzing the Amazon data set?
+- [ ] Decide parameters and thresholds for category definitions based on the data
 
-+ What are the best frameworks for text processing?
+- [ ] Enrich data by scraping Amazon for genres as extensively as possible
 
-+ Is it possible to use [Elasticsearch](https://www.elastic.co/products/elasticsearch) on the computing cluster or somehow connect it to the dataset on the cluster? Elasticsearch provides a lot of useful features for text processing (e.g. tokenizer, keyword/pattern/stop analyzer).
+- [ ] Create necessary intermediate files containing formatted data, to speed up analysis and computing
+
+- [ ] Find the best way to use VADER to analyze positivity and negativity of reviews
+
+- [ ] Calculate correlations between popularity metrics and positive and negative reviews and ratings
+ - With respect to time
+ - By aggregation by category (good, bad, controversial)
+ - By aggregation by genre and author
+
+- [ ] If necessary, run analysis on the cluster
+
+- [ ] Find the exact data story we want to tell (choose exact questions), make it compelling, and link it to social good
+
+- [ ] Decide format of report
+
+- [ ] Depending on report format, distribute tasks to individual group members
+
+- [ ] Produce good, polished visualizations that tell the story
+
+- [ ] Construct report into a coherent document
+
+- [ ] Update readme according to progress
+
+- [ ] Create a plan for presentation and poster creation
