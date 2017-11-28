@@ -80,10 +80,10 @@ We have decided to use the [VADER sentiment analysis toolkit](https://github.com
 ## Intermediate questions on the way to major questions:
 
 + What ratings indicate that a book is good or bad?
- - Relating rating to sentiment of review
+ * Relating rating to sentiment of review
 
 + Is there a discrepancy between a rating and its associated review's sentiment?
- - Do people give good ratings even though their comment is negative?
+ * Do people give good ratings even though their comment is negative?
 
 ## Major questions:
 
@@ -109,12 +109,12 @@ We have decided to use the [VADER sentiment analysis toolkit](https://github.com
 - [x] Get familiar with the data
 
 - [ ] Learn how to use the IC faculty cluster in order to perform basic statistics
- - Not fulfilled, since for now running Spark locally is sufficient
+ * Not fulfilled, since for now running Spark locally is sufficient
 
 - [x] Learn the basics of Hadoop/Spark/the best tool for the task
 
 - [x] Find the best frameworks for text processing/sentiment analysis
- - VADER was decided upon since it is a complete package and provides one comparable score
+ * VADER was decided upon since it is a complete package and provides one comparable score
 
 - [x] After getting familiar with the data, try to pick the project goal or
 goals that are the most feasible and have the possibility of generating
@@ -141,9 +141,9 @@ interesting results
 - [ ] Find the best way to use VADER to analyze positivity and negativity of reviews
 
 - [ ] Calculate correlations between popularity metrics and positive and negative reviews and ratings
- - With respect to time
- - By aggregation by category (good, bad, controversial)
- - By aggregation by genre and author
+ * With respect to time
+ * By aggregation by category (good, bad, controversial)
+ * By aggregation by genre and author
 
 - [ ] If necessary, run analysis on the cluster
 
