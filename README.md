@@ -1,5 +1,18 @@
 **_By: Nathalie Crevoisier, Adam Kozak, Tarmo Nurmi_**
 
+Image test:
+![Mean ratings](/Project/images/mean_rating.png)
+This is an image.
+
+
+
+
+
+
+
+
+
+
 # Analysis of reviews of books on Amazon
 
 # Updates for milestone 2:
