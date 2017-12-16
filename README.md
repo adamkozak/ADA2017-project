@@ -2,7 +2,8 @@
 
 Image test:
 
-![Mean ratings](/Project/images/mean_rating.png "Mean ratings")
+![Mean ratings](/Project/images/mean_rating.png)
+*caption*
 
 This is an image.
 
