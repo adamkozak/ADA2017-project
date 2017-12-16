@@ -1,5 +1,9 @@
 **_By: Nathalie Crevoisier, Adam Kozak, Tarmo Nurmi_**
 
+# The premise
+
+This document is the data story from the authors' course project for the [Applied Data Analysis](https://dlab.epfl.ch/teaching/fall2017/cs401/) course at the [École Polytechnique Fédérale de Lausanne](https://www.epfl.ch/), from Fall of 2017.
+
 Image test:
 
 ![Mean ratings](/Project/images/mean_rating.png)
