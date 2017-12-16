@@ -1,7 +1,9 @@
 **_By: Nathalie Crevoisier, Adam Kozak, Tarmo Nurmi_**
 
 Image test:
-![Mean ratings](/Project/images/mean_rating.png)
+
+![Mean ratings](/Project/images/mean_rating.png "Mean ratings")
+
 This is an image.
 
 
