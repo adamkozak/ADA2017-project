@@ -1,4 +1,4 @@
-_Authors:_ Nathalie Crevoisier, Adam Kozak, Tarmo Nurmi
+**_By: Nathalie Crevoisier, Adam Kozak, Tarmo Nurmi_**
 
 # Analysis of reviews of books on Amazon
 
