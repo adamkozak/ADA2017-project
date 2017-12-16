@@ -1,6 +1,6 @@
-# Analysis of reviews of books on Amazon
+_Authors:_ Nathalie Crevoisier, Adam Kozak, Tarmo Nurmi
 
-Nathalie Crevoisier, Adam Kozak, Tarmo Nurmi
+# Analysis of reviews of books on Amazon
 
 # Updates for milestone 2:
 
