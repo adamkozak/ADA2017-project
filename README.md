@@ -49,7 +49,7 @@ Immediately we notice that the identity of a book is given as the [Amazon Standa
 
 Now that introductions are out of the way, let's take a look at the distribution of ratings in the data:
 
-![Mean ratings](/Project/images/mean_rating.png)
+![Mean ratings](/Project/images/mean_ratings_consistent.png)
 
 Wow, that looks pretty heavily left-skewed! Apparently, reviewers are giving significantly more high than low ratings. Does this distribution really represent the sentiment of reviewers, or are people just not inclined to give low numerical scores even though they might bash the book in the review text?
 
