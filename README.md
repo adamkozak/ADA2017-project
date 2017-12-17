@@ -2,6 +2,8 @@
 
 _This data story is from the authors' course project for the [Applied Data Analysis](https://dlab.epfl.ch/teaching/fall2017/cs401/) course at the [École Polytechnique Fédérale de Lausanne](https://www.epfl.ch/), from Fall of 2017._
 
+# Introduction
+
 User reviews on [Amazon.com](https://www.amazon.com/) are a source of interesting insight into people's behavior on the internet. We decided to take a look into book reviews on Amazon over a period of time, to find answers to questions that interest us:
 
 **Research questions:**
@@ -44,7 +46,9 @@ Great purchase though!",
 
 Immediately we notice that the identity of a book is given as the [Amazon Standard Identification Number, ASIN](https://www.amazon.com/gp/seller/asin-upc-isbn-info.html). For a book this is the same number as its ISBN. Since actual book titles are nicer than numbers, we enrich the data by scraping the Amazon website for titles associated with ASINs, as well as more information on the book (genres, categories, etc.).
 
-Let's take a look at the distribution of ratings in the data:
+# Ratings, reviews and sentiment
+
+Now that introductions are out of the way, let's take a look at the distribution of ratings in the data:
 
 ![Mean ratings](/Project/images/mean_rating.png)
 
@@ -58,9 +62,25 @@ Looks pretty similar to the distribution of ratings. To really see if there is a
 
 ```(Image of differences)```
 
+Excellent, most of the mass of the distribution is around zero, meaning there is little difference! Seems like people actually give a rating that accurately reflects the sentiment in their review. **This means that we can use the star ratings as a measure of a reviewer's sentiment towards a book.**
 
+Now that the rating-sentiment relationship is established, we can move to classifying books as good, bad or controversial.
 
+# Goodness and controversiality of books
 
+Since most ratings are high in terms of numerical value, an absolute threshold for saying which books are good and which are bad is not sensible. Instead, we define bad books as the books with mean rating in the bottom 25 % of mean ratings, neutral books as the books with mean rating in the middle 50 % of mean ratings, and good books as the books with mean rating in the top 25 % of mean ratings. Therefore, goodness or badness is context-dependent, and books we say are bad or good are bad or good in this dataset's context.
+
+Now, we ask the question: _do people agree on which books are good and which are bad?_ To answer this question, we create another classification — controversial, neutral, or uncontroversial. Here, we use the standard deviation of ratings, and classify the lowest 25 % as uncontroversial, middle 50 % as neutral and top 25 % as controversial. The idea is that the more variation there is among the ratings for a given book, the more people are in disagreement over the book's goodness.
+
+Since mean and especially variance can vary wildly if there are only a few data points, **we classify only books with ratings from ten or more people**. This reduces noise and exposes actual trends. After classification, we find the number of books in different classes:
+
+|         | **Uncontroversial** | **Neutral** | **Controversial** |   |
+|---------|-----------------|---------|---------------|---|
+| **Good**    | 37761           | 11610   | 156           |   |
+| **Neutral** | 10801           | 69502   | 15415         |   |
+| **Bad**     | 566             | 17142   | 33558         |   |
+
+# Popularity of books
 
 
 
