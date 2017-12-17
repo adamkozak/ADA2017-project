@@ -58,7 +58,7 @@ To see what kind of sentiments people express in their reviews, we use [VADER se
 
 ```(Image of VADER compound scores)```
 
-Looks pretty similar to the distribution of ratings. To really see if there is a difference between a rating and its associated review's sentiment, we scale the ratings to the same \[-1,1\]-range as the VADER score, and calculate the difference between the rating and the sentiment:
+Looks pretty similar to the distribution of ratings. To really see if there is a difference between a rating and its associated review's sentiment, we scale the ratings to the same \[-1,+1\]-range as the VADER score, and calculate the difference between the rating and the sentiment:
 
 ```(Image of differences)```
 
@@ -81,13 +81,13 @@ Since mean and especially variance can vary wildly if there are only a few data 
 | **Bad**     | 566                 | 17142       | 33558             | 51266     |
 | _Total_     | 49128               | 98254       | 49129             | 196511    |
 
-_Out of the 367,982 books, 196,511 had at least 10 ratings, and the remaining 171,471 books had 9 or fewer._
+_Out of the 367,982 books, 196,511 had at least 10 ratings, and the remaining 171,471 books had 9 or fewer and thus were not classified._
 
 Most good books are also uncontroversial, and most bad books are controversial. Partly this is due to the skewness in mean ratings, but the difference is still quite striking.
 
 # Popularity of books
 
-
+The popularity of a book is related to the amount of interest people show towards it. 
 
 
 
