@@ -96,5 +96,14 @@ The vast majority of the reviews are written at the end of the time frame, from 
 
 Surprisingly, uncontroversial books gain more popularity than controversial ones in each goodness category throughout the time frame! Good books that are uncontroversial or controversy-neutral gain the most reviews, and bad books gain fewer reviews. _But, if a book is good and controversial, it will have variation in review numbers and eventually few reviews_. Answering our first research question, _How can negativeness or positiveness of reviews and ratings influence the popularity of a book?_, we can say that good books are popular, but consistently so only if they are uncontroversial or controversy-neutral. If book reviews agree with each other, a book is more popular than if there is disagreement in reviews, and this effect is stronger than the actual positivity or negativity of the reviews!
 
+# Time evolution of high and low reviews
 
+```(time evolution image)```
 
+# The snowball effect
+
+We examine whether there is a discernible snowball effect in the ratings, i.e. do the first ratings dictate the final mean rating score of a book. In order to filter out noise, we only look at the books with 100 or more reviews. The mean of all ratings for a book against the mean of the first 25 ratings made on the book paints a clear picture:
+
+```(snowball image)```
+
+The mean rating increases as a function of the mean of the first 25 ratings. Correlation does not imply causation, but this correlation tells us that if the mean of the first 25 ratings is high, the overall mean rating is high as well. For low first ratings, the effect is less pronounced and there is more variation: bad intial ratings can coexist with a good overall rating.
