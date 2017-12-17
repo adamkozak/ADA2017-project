@@ -87,7 +87,11 @@ Most good books are also uncontroversial, and most bad books are controversial. 
 
 # Popularity of books
 
-The popularity of a book is related to the amount of interest people show towards it. We decide to define popularity as the number of reviews a book accrues: the more popular the book, the more it is reviewed. The thirty most 
+The popularity of a book is related to the amount of interest people show towards it. We decide to define popularity as the number of reviews a book accrues: the more popular the book, the more it is reviewed, and vice versa. But first, how many reviews are given in general during the time frame of the dataset? Let's look at the number of reviews written per month:
+
+![Reviews per month](/Project/images/reviews_per_month.png)
+
+A lot of the reviews are written at the end of the time frame.
 
 
 1. Time-independent popularity: the number of reviews at the end of the dataset time period (July 2014)
