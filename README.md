@@ -1,6 +1,26 @@
 **_By: Nathalie Crevoisier, Adam Kozak, Tarmo Nurmi_**
 
-This data story is from the authors' course project for the [Applied Data Analysis](https://dlab.epfl.ch/teaching/fall2017/cs401/) course at the [École Polytechnique Fédérale de Lausanne](https://www.epfl.ch/), from Fall of 2017.
+_This data story is from the authors' course project for the [Applied Data Analysis](https://dlab.epfl.ch/teaching/fall2017/cs401/) course at the [École Polytechnique Fédérale de Lausanne](https://www.epfl.ch/), from Fall of 2017._
+
+User reviews on [Amazon.com](https://www.amazon.com/) are a source of interesting insight into people's behavior on the internet. We, the authors, decided to take a look into book reviews on Amazon over a period of time, to find answers to questions that interest us:
+
+## Research questions:
+
++ How can negativeness or positiveness of reviews and ratings influence the popularity of a book?
+
++ How do negative and positive reviews and ratings evolve with time?
+
++ Can we see a snowball effect in reviews and ratings?
+
+Before answering these questions, we need to examine the relationship between a text _review_ and its associated _rating_ and define the notion of 'good' and 'bad' books:
+
+## Intermediate questions on the way to research questions:
+
++ Is there a discrepancy between a rating and its associated review's sentiment?
+  * Do people give good ratings even though their comment is negative?
+
++ What ratings indicate that a book is good or bad?
+  * Relating _rating_ (stars given) to sentiment of _review_ (textual evaluation)
 
 The dataset we will be examining is the [5-core subset](https://en.wikipedia.org/wiki/Degeneracy_(graph_theory)) of [Julian McAuley's Amazon dataset](http://jmcauley.ucsd.edu/data/amazon/). The data contains 8,898,041 reviews of 367,983 books, and each review has an associated star rating (1-5 stars). An example review looks like this:
 
@@ -28,7 +48,7 @@ Let's take a look at the distribution of ratings in the data:
 
 ![Mean ratings](/Project/images/mean_rating.png)
 
-Wow, that looks pretty heavily left-skewed! Apparently, reviewers are giving significantly more high than low ratings. TEST
+Wow, that looks pretty heavily left-skewed! Apparently, reviewers are giving significantly more high than low ratings.
 
 
 
