@@ -81,7 +81,7 @@ Since mean and especially variance can vary wildly if there are only a few data 
 | **Bad**     | 566                 | 17142       | 33558             | 51266     |
 | _Total_     | 49128               | 98254       | 49129             | 196511    |
 
-_Out of the 367,982 books, 196,511 had at least 10 ratings, and the remaining 171,471 books had 9 or fewer and thus were not classified._
+_Out of the 367,982 books, 196,511 had at least 10 ratings, and the remaining 171,471 books had 9 or fewer and thus were not classified. The numbers of good and bad books or controversial or uncontroversial books are not exactly equal, because there are several books with mean rating or standard deviation exactly equal to the classification threshold values._
 
 Most good books are also uncontroversial, and most bad books are controversial. Partly this is due to the skewness in mean ratings, but the difference is still quite striking.
 
