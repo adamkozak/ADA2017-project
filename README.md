@@ -56,11 +56,11 @@ Wow, that looks pretty heavily left-skewed! Apparently, reviewers are giving sig
 
 To see what kind of sentiments people express in their reviews, we use [VADER sentiment analysis](https://github.com/cjhutto/vaderSentiment), which gives a compound score of a review on the positive-negative axis. The higher the score, the more positive the review, with -1 being as negative and +1 as positive as possible. Let's see the mean VADER score distribution:
 
-![VADER mean](/Project/images/Distribution_mean_Vader_compound_score_book)
+![VADER mean](/Project/images/Distribution_mean_Vader_compound_score_book.png)
 
 Looks pretty similar to the distribution of ratings. To really see if there is a difference between a rating and its associated review's sentiment, we scale the ratings to the same \[-1,+1\]-range as the VADER score, and calculate the difference between the rating and the sentiment:
 
-![VADER differences](/Project/images/Distribution_difference_mean_ratings_mean_Vader_compound_books)
+![VADER differences](/Project/images/Distribution_difference_mean_ratings_mean_Vader_compound_books.png)
 
 Excellent, most of the mass of the distribution is around zero, meaning there is little difference! Seems like people actually give a rating that accurately reflects the sentiment in their review. **This means that we can use the star ratings as a measure of a reviewer's sentiment towards a book.**
 
