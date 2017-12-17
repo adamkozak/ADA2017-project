@@ -2,9 +2,9 @@
 
 _This data story is from the authors' course project for the [Applied Data Analysis](https://dlab.epfl.ch/teaching/fall2017/cs401/) course at the [École Polytechnique Fédérale de Lausanne](https://www.epfl.ch/), from Fall of 2017._
 
-User reviews on [Amazon.com](https://www.amazon.com/) are a source of interesting insight into people's behavior on the internet. We, the authors, decided to take a look into book reviews on Amazon over a period of time, to find answers to questions that interest us:
+User reviews on [Amazon.com](https://www.amazon.com/) are a source of interesting insight into people's behavior on the internet. We decided to take a look into book reviews on Amazon over a period of time, to find answers to questions that interest us:
 
-## Research questions:
+**Research questions:**
 
 + How can negativeness or positiveness of reviews and ratings influence the popularity of a book?
 
@@ -14,7 +14,7 @@ User reviews on [Amazon.com](https://www.amazon.com/) are a source of interestin
 
 Before answering these questions, we need to examine the relationship between a text _review_ and its associated _rating_, define the notion of 'good' and 'bad' books, and define what it means for a book to be 'popular':
 
-## Intermediate questions on the way to research questions:
+**Intermediate questions:**
 
 + Is there a discrepancy between a rating and its associated review's sentiment?
   * Do people give good ratings even though their comment is negative?
@@ -22,7 +22,7 @@ Before answering these questions, we need to examine the relationship between a 
 + What ratings indicate that a book is good or bad?
   * Relating _rating_ (stars given) to sentiment of _review_ (textual evaluation)
 
-The dataset we will be examining is the [5-core subset](https://en.wikipedia.org/wiki/Degeneracy_(graph_theory)) of [Julian McAuley's Amazon dataset](http://jmcauley.ucsd.edu/data/amazon/). The data contains 8,898,041 reviews of 367,983 books, and each review has an associated star rating (1-5 stars). An example review looks like this:
+The dataset we examine is the [5-core subset](https://en.wikipedia.org/wiki/Degeneracy_(graph_theory)) of [Julian McAuley's Amazon dataset](http://jmcauley.ucsd.edu/data/amazon/). The data contains 8,898,041 reviews of 367,982 books, and each review has an associated star rating (1-5 stars). An example review looks like this:
 
 ```
 { 
@@ -48,7 +48,17 @@ Let's take a look at the distribution of ratings in the data:
 
 ![Mean ratings](/Project/images/mean_rating.png)
 
-Wow, that looks pretty heavily left-skewed! Apparently, reviewers are giving significantly more high than low ratings.
+Wow, that looks pretty heavily left-skewed! Apparently, reviewers are giving significantly more high than low ratings. Does this distribution really represent the sentiment of reviewers, or are people just not inclined to give low numerical scores even though they might bash the book in the review text?
+
+To see what kind of sentiments people express in their reviews, we use [VADER sentiment analysis](https://github.com/cjhutto/vaderSentiment), which gives a compound score of a review on the positive-negative axis. The higher the score, the more positive the review, with -1 being as negative and +1 as positive as possible.
+
+```(Image of VADER compound scores)```
+
+Looks pretty similar to the distribution of ratings. To really see if there is a difference between a rating and its associated review's sentiment, we scale the ratings to the same \[-1,1\]-range as the VADER score, and calculate the difference between the rating and the sentiment:
+
+```(Image of differences)```
+
+
 
 
 
