@@ -21,8 +21,7 @@ Before answering these questions, we need to examine the relationship between a 
 + Is there a discrepancy between a rating and its associated review's sentiment?
   * Do people give good ratings even though their comment is negative?
 
-+ What ratings indicate that a book is good or bad?
-  * Relating _rating_ (stars given) to sentiment of _review_ (textual evaluation)
++ How can we classify books into good, bad, and those for which there is no clear consensus?
 
 The dataset we examine is the [5-core subset](https://en.wikipedia.org/wiki/Degeneracy_(graph_theory)) of [Julian McAuley's Amazon dataset](http://jmcauley.ucsd.edu/data/amazon/), which spans reviews from May 1996 to July 2014. The data contains 8,898,041 reviews of 367,982 books, and each review has an associated star rating (1-5 stars). An example review looks like this:
 
