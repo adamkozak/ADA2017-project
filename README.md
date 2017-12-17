@@ -91,11 +91,11 @@ The popularity of a book is related to the amount of interest people show toward
 
 ![Reviews per month](/Project/images/reviews_per_month.png)
 
-A lot of the reviews are written at the end of the time frame, from around January 2011 to July 2014. This is the most interesting area, since most of the overall popularity of a book is generated there. How does this timeframe look for our book classifications?
+The vast majority of the reviews are written at the end of the time frame, from around January 2011 to July 2014. This is the most interesting area, since most of the overall popularity of a book is generated there. How does this timeframe look for our book classifications?
 
 ![Reviews per month per category](/Project/images/number_of_reviews_per_month_for_each_category.png)
 
-TEXT TEXT TEXT
+Surprisingly, uncontroversial books gain more popularity than controversial ones, and 
 
 1. Time-independent popularity: the number of reviews at the end of the dataset time period (July 2014)
 2. Time-dependent popularity: the number of reviews at the end of the dataset time period, divided by the number of months between the first review in the dataset and the end of the dataset period
