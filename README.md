@@ -82,7 +82,7 @@ Since mean and especially variance can vary wildly if there are only a few data 
 
 _Out of the 367,982 books, 196,511 had at least 10 ratings, and the remaining 171,471 books had 9 or fewer and thus were not classified. The numbers of good and bad books or controversial or uncontroversial books are not exactly equal, because there are several books with mean rating or standard deviation exactly equal to the classification threshold values._
 
-Most good books are also uncontroversial, and most bad books are controversial. Partly this is due to the skewness in mean ratings, but the difference is still quite striking.
+Most good books are also uncontroversial, and most bad books are also controversial. Partly this is due to the skewness in mean ratings, but the difference is still quite striking.
 
 # Popularity of books
 
@@ -107,3 +107,8 @@ We examine whether there is a discernible snowball effect in the ratings, i.e. d
 ```(snowball image)```
 
 The snowball effect is clear: the mean rating increases as a function of the mean of the first 25 ratings. Correlation does not imply causation, but this correlation tells us that if the mean of the first 25 ratings is high, the overall mean rating is high as well. For low first ratings, the effect is less pronounced and there is more variation — bad intial ratings can coexist with a good overall rating.
+
+# Conclusion
+
+We have seen that 
+
