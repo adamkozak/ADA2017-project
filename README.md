@@ -1,12 +1,27 @@
 **_By: Nathalie Crevoisier, Adam Kozak, Tarmo Nurmi_**
 
-This document is the data story from the authors' course project for the [Applied Data Analysis](https://dlab.epfl.ch/teaching/fall2017/cs401/) course at the [École Polytechnique Fédérale de Lausanne](https://www.epfl.ch/), from Fall of 2017.
+This data story is from the authors' course project for the [Applied Data Analysis](https://dlab.epfl.ch/teaching/fall2017/cs401/) course at the [École Polytechnique Fédérale de Lausanne](https://www.epfl.ch/), from Fall of 2017.
 
-Image test:
+The dataset we will be examining is the [5-core subset](https://en.wikipedia.org/wiki/Degeneracy_(graph_theory)) of [Julian McAuley's Amazon dataset](http://jmcauley.ucsd.edu/data/amazon/). The data contains 8,898,041 reviews of 367,983 books, and each review has an associated star rating (1-5 stars). An example review looks like this:
+
+`{ 
+"reviewerID": "A2SUAM1J3GNN3B",
+"asin": "0000013714",
+"reviewerName": "J. McDonald",
+"helpful": [2, 3],
+"reviewText": "I bought this for my husband who plays the piano. He is having a wonderful time playing these old hymns. The music is at times hard to read because we think the book was published for singing from more than playing from. Great purchase though!",
+"overall": 5.0,
+"summary": "Heavenly Highway Hymns",
+"unixReviewTime": 1252800000,
+"reviewTime": "09 13, 2009" }`
+
+Immediately we notice that the identity of a book is given as the [Amazon Standard Identification Number, ASIN](https://www.amazon.com/gp/seller/asin-upc-isbn-info.html). For a book this is the same number as its ISBN. Since actual book titles are nicer than numbers, we enrich the data by scraping the Amazon website for titles associated with ASINs, as well as more information on the book (genres, categories, etc.).
+
+Let's take a look at the distribution of ratings in the data:
 
 ![Mean ratings](/Project/images/mean_rating.png)
 
-This is an image.
+Wow, that looks pretty heavily left-skewed! Apparently, reviewers are giving significantly more high than low ratings. 
 
 
 
