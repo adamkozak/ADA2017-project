@@ -84,6 +84,17 @@ _Out of the 367,982 books, 196,511 had at least 10 ratings, and the remaining 17
 
 Most good books are also uncontroversial, and most bad books are also controversial. Partly this is due to the skewness in mean ratings, but the difference is still quite striking.
 
+To gain a little more insight into these categories, we look at the genre distributions within them. Let's check out the top ten genres in the good, bad, controversial and uncontroversial classes:
+
+![Good genres](/Project/images/good_books_categories.png)
+
+![Bad genres](/Project/images/bad_books_categories.png)
+
+![Controversial genres](/Project/images/books_contr_categories.png)
+
+![Uncontroversial genres](/Project/images/books_uncontr_categories.png)
+
+
 # Popularity of books
 
 The popularity of a book is related to the amount of interest people show towards it. We decide to define popularity as the number of reviews a book accrues: the more popular the book, the more it is reviewed, and vice versa. But first, how many reviews are given in general during the time frame of the dataset? Let's look at the number of reviews written per month:
