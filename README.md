@@ -93,7 +93,7 @@ The popularity of a book is related to the amount of interest people show toward
 
 The vast majority of the reviews are written at the end of the time frame, from around January 2011 to July 2014. This is the most interesting area, since most of the overall popularity of a book is generated there. How does this timeframe look for our book classifications?
 
-![Reviews per month per category](/Project/images/number_of_reviews_per_month_for_each_category.png)
+![Reviews per month per category](/Project/images/number_of_reviews_per_month_for_each_category_crop.png)
 
 Surprisingly, uncontroversial books gain more popularity than controversial ones, and 
 
