@@ -4,7 +4,7 @@ This data story is from the authors' course project for the [Applied Data Analys
 
 The dataset we will be examining is the [5-core subset](https://en.wikipedia.org/wiki/Degeneracy_(graph_theory)) of [Julian McAuley's Amazon dataset](http://jmcauley.ucsd.edu/data/amazon/). The data contains 8,898,041 reviews of 367,983 books, and each review has an associated star rating (1-5 stars). An example review looks like this:
 
-`{ 
+```{ 
 "reviewerID": "A2SUAM1J3GNN3B",
 "asin": "0000013714",
 "reviewerName": "J. McDonald",
@@ -13,7 +13,8 @@ The dataset we will be examining is the [5-core subset](https://en.wikipedia.org
 "overall": 5.0,
 "summary": "Heavenly Highway Hymns",
 "unixReviewTime": 1252800000,
-"reviewTime": "09 13, 2009" }`
+"reviewTime": "09 13, 2009" 
+}```
 
 Immediately we notice that the identity of a book is given as the [Amazon Standard Identification Number, ASIN](https://www.amazon.com/gp/seller/asin-upc-isbn-info.html). For a book this is the same number as its ISBN. Since actual book titles are nicer than numbers, we enrich the data by scraping the Amazon website for titles associated with ASINs, as well as more information on the book (genres, categories, etc.).
 
