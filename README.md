@@ -74,12 +74,16 @@ Now, we ask the question: _do people agree on which books are good and which are
 
 Since mean and especially variance can vary wildly if there are only a few data points, **we classify only books with ratings from ten or more people**. This reduces noise and exposes actual trends. After classification, we find the number of books in different classes:
 
-|             | **Uncontroversial** | **Neutral** | **Controversial** | Total |
+|             | **Uncontroversial** | **Neutral** | **Controversial** | _Total_   |
 |-------------|---------------------|-------------|-------------------|-----------|
 | **Good**    | 37761               | 11610       | 156               | 49527     |
 | **Neutral** | 10801               | 69502       | 15415             | 95718     |
 | **Bad**     | 566                 | 17142       | 33558             | 51266     |
-| Total   | 49128               | 98254       | 49129             | 196511    |
+| _Total_     | 49128               | 98254       | 49129             | 196511    |
+
+_Out of the 367,982 books, 196,511 had at least 10 ratings, and the remaining 171,471 books had 9 or fewer._
+
+Most good books are also uncontroversial, and most bad books are controversial. Partly this is due to the skewness in mean ratings, but the difference is still quite striking.
 
 # Popularity of books
 
