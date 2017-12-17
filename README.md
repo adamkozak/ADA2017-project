@@ -24,7 +24,7 @@ Before answering these questions, we need to examine the relationship between a 
 + What ratings indicate that a book is good or bad?
   * Relating _rating_ (stars given) to sentiment of _review_ (textual evaluation)
 
-The dataset we examine is the [5-core subset](https://en.wikipedia.org/wiki/Degeneracy_(graph_theory)) of [Julian McAuley's Amazon dataset](http://jmcauley.ucsd.edu/data/amazon/). The data contains 8,898,041 reviews of 367,982 books, and each review has an associated star rating (1-5 stars). An example review looks like this:
+The dataset we examine is the [5-core subset](https://en.wikipedia.org/wiki/Degeneracy_(graph_theory)) of [Julian McAuley's Amazon dataset](http://jmcauley.ucsd.edu/data/amazon/), which spans reviews from May 1996 to July 2014. The data contains 8,898,041 reviews of 367,982 books, and each review has an associated star rating (1-5 stars). An example review looks like this:
 
 ```
 { 
@@ -91,7 +91,7 @@ The popularity of a book is related to the amount of interest people show toward
 
 ![Reviews per month](/Project/images/reviews_per_month.png)
 
-A lot of the reviews are written at the end of the time frame. This is the most interesting area, since most of the overall popularity of a book is generated there. How does this timeframe look for our book classifications?
+A lot of the reviews are written at the end of the time frame, from around January 2011 to July 2014. This is the most interesting area, since most of the overall popularity of a book is generated there. How does this timeframe look for our book classifications?
 
 ![Reviews per month per category](/Project/images/number_of_reviews_per_month_for_each_category.png)
 
