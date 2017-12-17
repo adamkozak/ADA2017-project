@@ -86,9 +86,6 @@ Most good books are also uncontroversial, and most bad books are also controvers
 
 To gain a little more insight into these categories, we look at the genre distributions within them. Let's check out the top ten genres in the good, bad, controversial and uncontroversial classes:
 
-| ![Good genres](/Project/images/good_books_categories.png) | ![Bad genres](/Project/images/bad_books_categories.png) |
-| ![Controversial genres](/Project/images/books_contr_categories.png) | ![Uncontroversial genres](/Project/images/books_uncontr_categories.png) |
-
 ![Good genres](/Project/images/good_books_categories.png) ![Bad genres](/Project/images/bad_books_categories.png)
 
 ![Controversial genres](/Project/images/books_contr_categories.png) ![Uncontroversial genres](/Project/images/books_uncontr_categories.png)
