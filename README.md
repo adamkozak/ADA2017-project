@@ -126,6 +126,8 @@ We examine whether there is a discernible snowball effect in the ratings, i.e. d
 
 ![Snowball](Project/images/final_25.png)
 
+_Jitter was added to discern data points from each other, hence some books seem to have a mean rating greater than 5. This is merely an illusion spawning from necessities in visualization!_
+
 The snowball effect is clear: the mean rating increases as a function of the mean of the first 25 ratings. Correlation does not imply causation, but this correlation tells us that if the mean of the first 25 ratings is high, the overall mean rating is high as well. For low first ratings, the effect is less pronounced and there is more variation — bad intial ratings can coexist with a good overall rating.
 
 # Conclusion
