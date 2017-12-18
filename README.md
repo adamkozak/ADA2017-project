@@ -97,7 +97,7 @@ The main differences seem to be that Mystery, Thriller & Suspense and Politics &
 
 The popularity of a book is related to the amount of interest people show towards it. We decide to define popularity as the number of reviews a book accrues: the more popular the book, the more it is reviewed, and vice versa. But first, how many reviews are given in general during the time frame of the dataset? Let's look at the number of reviews written per month:
 
-![Reviews per month](/Project/images/reviews_per_month_crop.png)
+![Reviews per month](/Project/images/number_of_reviews_over_time.png)
 
 The vast majority of the reviews are written at the end of the time frame, from around January 2011 to July 2014. This is the most interesting area, since most of the overall popularity of a book is generated there. How does this timeframe look for our book classifications?
 
