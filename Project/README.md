@@ -105,7 +105,7 @@ We decided to use the [VADER sentiment analysis toolkit](https://github.com/cjhu
 
 - [x] Get familiar with the data
 
-- [ ] Learn how to use the IC faculty cluster in order to perform basic statistics
+- [ ] ~~Learn how to use the IC faculty cluster in order to perform basic statistics~~
   * Not fulfilled, since running Spark locally was sufficient
 
 - [x] Learn the basics of Hadoop/Spark/the best tool for the task
