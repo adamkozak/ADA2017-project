@@ -120,13 +120,19 @@ Pretty stable. How about we cut and rescale the y-axis a bit?
 
 Especially in reviewers' sentiments, there's something of a downhill from 2001 to 2005, but after that we seem to be getting more positive reviews! The stability of the score indicates that even though there is small variation, the general attitude of reviewers has not become more negative (even though on the internet it might seem that we are constantly heading in a more grim and pessimistic direction in people's behavior, at least Amazon reviewers keep a constant positive note).
 
+To examine the temporal behavior of the _numbers of reviews_ with respect to months and seasons, we plot for each month the percentage of reviews made in that month out of all reviews that year for the years 2000-2013.
+
+![Months](Project/images/number_of_ratings_stacked2.png)
+
+Again, the year 2012 jumps out as highly unusual. Otherwise, we see that there is a consistent drop in review numbers in February, while in the summer there is a small increase.
+
 # The snowball effect
 
 We examine whether there is a discernible snowball effect in the ratings, i.e. do the first ratings dictate the final mean rating score of a book. In order to filter out noise, we only look at the books with 100 or more reviews. The mean of all ratings for a book against the mean of the first 25 ratings made on the book paints a clear picture:
 
 ![Snowball](Project/images/final_25.png)
 
-_Jitter was added to discern data points from each other, hence some books seem to have a mean rating greater than 5. This is merely an illusion spawning from necessities in visualization!_
+_Jitter was added to discern data points from each other, hence some books seem to have a mean rating greater than 5. This is merely an illusion brought about by necessities in visualization!_
 
 The snowball effect is clear: the mean rating increases as a function of the mean of the first 25 ratings. Correlation does not imply causation, but this correlation tells us that if the mean of the first 25 ratings is high, the overall mean rating is high as well. For low first ratings, the effect is less pronounced and there is more variation — bad intial ratings can coexist with a good overall rating.
 
