@@ -1,4 +1,4 @@
-**_By: Nathalie Crevoisier, Adam Kozak, Tarmo Nurmi_**
+**By: Nathalie Crevoisier, Adam Kozak, Tarmo Nurmi**
 
 _This data story is from the authors' course project for the [Applied Data Analysis](https://dlab.epfl.ch/teaching/fall2017/cs401/) course at the [École Polytechnique Fédérale de Lausanne](https://www.epfl.ch/), from Fall of 2017._
 
