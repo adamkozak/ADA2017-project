@@ -115,7 +115,7 @@ Pretty stable. How about we cut and rescale the y-axis a bit?
 
 ![Near time evolution](Project/images/time_evo_near.png)
 
-Especially in reviewers' sentiments, there's something of a downhill from 2001 to 2005, but after that we seem to be getting more positive reviews! The stability of the score indicates that even though there is small variation, the general attitude of reviewers has not become mroe negative (even though on the internet, it might seem that we are constantly heading in a more grim and pessimistic direction in people's behavior, at least Amazon reviewers keep a constant positive note).
+Especially in reviewers' sentiments, there's something of a downhill from 2001 to 2005, but after that we seem to be getting more positive reviews! The stability of the score indicates that even though there is small variation, the general attitude of reviewers has not become more negative (even though on the internet, it might seem that we are constantly heading in a more grim and pessimistic direction in people's behavior, at least Amazon reviewers keep a constant positive note).
 
 # The snowball effect
 
