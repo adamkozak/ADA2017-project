@@ -2,6 +2,8 @@
 
 Nathalie Crevoisier, Adam Kozak, Tarmo Nurmi
 
+**Data story:** https://adamkozak.github.io/ADA2017-project/
+
 # Updates for milestone 2:
 
 + Abstract and dataset description modified
@@ -159,14 +161,20 @@ interesting results
 
 - [x] Create a plan for presentation and poster creation
 
-Contributions of all group members
+# Up until presentation:
 
-ADAM 
-Data handling using Spark, Creation of many datasets to be handled without Spark, Data poking and plots drawing to dig into the dataset, Scraping from Amazon for book categories and all analyses using those categories, K-means for books classification, Vader calculations, influence of first ratings analysis, snowball effect analysis. 
+- [ ] Create poster in required format (Everyone)
 
-TARMO 
-Readme file writing and updating, Final books classification into 6 categories, cross-section categories calculations, Data story writing.
+- [ ] Present poster (Nathalie)
 
-NATHALIE 
-First naïve way of classifying books into categories, Analyses using classifications for books into good/bad/controversial, Analyses using Vader results, time evolutions analyses. Readme file updating and final comments on notebook. Will work on the final presentation. 
+# Contributions:
+
+NATHALIE: 
+First naïve way of classifying books into categories, analyses using good/bad/controversial classifications, analyses using Vader results, time evolutions analyses. Readme file updating, final comments on notebook, visualizations. Will present the final presentation. 
+
+ADAM: 
+Data handling using Spark, creation of many intermediate datasets to be handled without Spark, data poking and plots drawing to dig into the dataset, scraping from Amazon for book categories and all analyses using those categories, K-means for books classification, Vader calculations, influence of first ratings analysis, snowball effect analysis, visualizations. 
+
+TARMO: 
+Data story (report) planning and writing, question formulation, readme file writing and updating, final book classifications into good-bad and controversial-uncontroversial classes, cross-section categories calculations, visualizations.
 
