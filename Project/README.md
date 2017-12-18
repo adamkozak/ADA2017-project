@@ -16,7 +16,7 @@ Nathalie Crevoisier, Adam Kozak, Tarmo Nurmi
 
 + **Contributions** section added
 
-+ The data pipeline notebook is **AMAZON BOOKS - Project ADA 2017.ipynb**
++ The data pipeline notebook is **AMAZON BOOKS - Project ADA 2017 .ipynb**
 
 
 # Abstract
