@@ -100,7 +100,9 @@ The popularity of a book is related to the amount of interest people show toward
 
 ![Reviews per month](/Project/images/number_of_reviews_over_time.png)
 
-The vast majority of the reviews are written at the end of the time frame, from around January 2011 to July 2014. This is the most interesting area, since most of the overall popularity of a book is generated there. How does this timeframe look for our book classifications?
+The vast majority of the reviews are written at the end of the time frame, from around January 2011 to July 2014. What happened around 2012 to warrant an exponential growth? Maybe the growth isn't growth at all, but [Amazon retroactively deleting older reviews en masse?](http://www.nytimes.com/2012/12/23/technology/amazon-book-reviews-deleted-in-a-purge-aimed-at-manipulation.html?pagewanted=all&_r=0) Since this is something Amazon is not very public about, we can only speculate.
+
+Regardless of background causes, the growth period is the most interesting part of the curve, since most of the overall popularity of a book is generated there. How does this timeframe look for our book classifications?
 
 ![Reviews per month per category](/Project/images/number_of_reviews_per_month_for_each_category_crop.png)
 
