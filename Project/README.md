@@ -176,5 +176,5 @@ ADAM:
 Data handling using Spark, creation of many intermediate datasets to be handled without Spark, data poking and plots drawing to dig into the dataset, scraping from Amazon for book categories and all analyses using those categories, K-means for books classification, Vader calculations, influence of first ratings analysis, snowball effect analysis, visualizations. 
 
 TARMO: 
-Data story (report) planning and writing, question formulation, readme file writing and updating, notebook commenting and organization, final book classifications into good-bad and controversial-uncontroversial classes, cross-section categories calculations, visualizations.
+Data story (report) planning and writing, question formulation, readme file writing and updating, notebook commenting, final book classifications into good-bad and controversial-uncontroversial classes, cross-section categories calculations, visualizations.
 
