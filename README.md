@@ -54,7 +54,7 @@ Now that introductions are out of the way, let's take a look at the distribution
 
 Wow, that looks pretty heavily left-skewed! Apparently, reviewers are giving significantly more high than low ratings. Does this distribution really represent the sentiment of reviewers, or are people just not inclined to give low numerical scores even though they might bash the book in the review text?
 
-To see what kind of sentiments people express in their reviews, we use [VADER sentiment analysis](https://github.com/cjhutto/vaderSentiment), which gives a compound score of a review on the positive-negative axis. The higher the score, the more positive the review, with -1 being as negative and +1 as positive as possible. Let's see the mean VADER score distribution:
+To see what kind of sentiments people express in their reviews, we use [VADER sentiment analysis\[1\]](https://github.com/cjhutto/vaderSentiment), which gives a compound score of a review on the positive-negative axis. The higher the score, the more positive the review, with -1 being as negative and +1 as positive as possible. Let's see the mean VADER score distribution:
 
 ![VADER mean](/Project/images/Distribution_mean_Vader_compound_score_book.png)
 
@@ -129,4 +129,11 @@ The snowball effect is clear: the mean rating increases as a function of the mea
 # Conclusion
 
 We have seen that uncontroversiality and goodness (high mean rating) are keys to popularity of books, and that controversial books are less popular than uncontroversial ones in each goodness category. The average sentiment of an Amazon book review has remained stable and quite positive over the years 1999-2014, which is good news for those fearing for ever-increasing gloominess on the internet. The reviews themselves experience a snowball effect, where early ratings are heavily correlated with the mean rating after lots of reviews have been made.
+
+# References
+
+[1] Hutto, C.J. & Gilbert, E.E. (2014). VADER: A Parsimonious Rule-based Model for
+Sentiment Analysis of Social Media Text. Eighth International Conference on
+Weblogs and Social Media (ICWSM-14). Ann Arbor, MI, June 2014.
+
 
