@@ -132,7 +132,7 @@ The snowball effect is clear: the mean rating increases as a function of the mea
 
 # Conclusion
 
-We have seen that uncontroversiality and goodness (high mean rating) are keys to popularity of books, and that controversial books are less popular than uncontroversial ones in each goodness category. The average sentiment of an Amazon book review has remained stable and quite positive over the years 1999-2014, which is good news for those fearing for ever-increasing gloominess on the internet. The reviews themselves experience a snowball effect, where early ratings are heavily correlated with the mean rating after lots of reviews have been made.
+We have seen that uncontroversiality and goodness (high mean rating) are key to popularity of books, and that controversial books are less popular than uncontroversial ones in each goodness category. The average sentiment of an Amazon book review has remained stable and quite positive over the years 1999-2014, which is good news for those fearing for ever-increasing gloominess on the internet. The reviews themselves experience a snowball effect, where early ratings are heavily correlated with the mean rating after lots of reviews have been made.
 
 # References
 
