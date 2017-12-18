@@ -109,7 +109,7 @@ We have decided to use the [VADER sentiment analysis toolkit](https://github.com
 - [x] Get familiar with the data
 
 - [ ] Learn how to use the IC faculty cluster in order to perform basic statistics
-  * Not fulfilled, since for now running Spark locally is sufficient
+  * Not fulfilled, since running Spark locally was sufficient
 
 - [x] Learn the basics of Hadoop/Spark/the best tool for the task
 
@@ -130,33 +130,43 @@ interesting results
 
 ## Up until milestone 3 (report):
 
-- [ ] Decide all models of grouping data into categories (negative/positive, fast/slow plateauing of review numbers, etc.)
+- [x] Decide all models of grouping data into categories (negative/positive, fast/slow plateauing of review numbers, etc.)
 
-- [ ] Decide parameters and thresholds for category definitions based on the data
+- [x] Decide parameters and thresholds for category definitions based on the data
 
-- [ ] Enrich data by scraping Amazon for genres as extensively as possible
+- [x] Enrich data by scraping Amazon for genres as extensively as possible
 
-- [ ] Create necessary intermediate files containing formatted data, to speed up analysis and computing
+- [x] Create necessary intermediate files containing formatted data, to speed up analysis and computing
 
-- [ ] Find the best way to use VADER to analyze positivity and negativity of reviews
+- [x] Find the best way to use VADER to analyze positivity and negativity of reviews
 
-- [ ] Calculate correlations between popularity metrics and positive and negative reviews and ratings
+- [x] Calculate correlations between popularity metrics and positive and negative reviews and ratings
   * With respect to time
   * By aggregation by category (good, bad, controversial)
   * By aggregation by genre and author
 
-- [ ] If necessary, run analysis on the cluster
+- [x] Find the exact data story we want to tell (choose exact questions), make it compelling, and link it to social good
 
-- [ ] Find the exact data story we want to tell (choose exact questions), make it compelling, and link it to social good
+- [x] Decide format of report
 
-- [ ] Decide format of report
+- [x] Depending on report format, distribute tasks to individual group members
 
-- [ ] Depending on report format, distribute tasks to individual group members
+- [x] Produce good, polished visualizations that tell the story
 
-- [ ] Produce good, polished visualizations that tell the story
+- [x] Construct report into a coherent document
 
-- [ ] Construct report into a coherent document
+- [x] Update readme according to progress
 
-- [ ] Update readme according to progress
+- [x] Create a plan for presentation and poster creation
 
-- [ ] Create a plan for presentation and poster creation
+Contributions of all group members
+
+ADAM 
+Data handling using Spark, Creation of many datasets to be handled without Spark, Data poking and plots drawing to dig into the dataset, Scraping from Amazon for book categories and all analyses using those categories, K-means for books classification, Vader calculations, influence of first ratings analysis, snowball effect analysis. 
+
+TARMO 
+Readme file writing and updating, Final books classification into 6 categories, cross-section categories calculations, Data story writing.
+
+NATHALIE 
+First naïve way of classifying books into categories, Analyses using classifications for books into good/bad/controversial, Analyses using Vader results, time evolutions analyses. Readme file updating and final comments on notebook. 
+
