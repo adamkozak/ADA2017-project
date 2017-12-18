@@ -10,7 +10,7 @@ User reviews on [Amazon.com](https://www.amazon.com/) are a source of interestin
 
 + How can negativeness or positiveness of reviews and ratings influence the popularity of a book?
 
-+ How do negative and positive reviews and ratings evolve with time?
++ How do the sentiments of reviews evolve over time?
 
 + Can we see a snowball effect in reviews and ratings?
 
@@ -20,6 +20,7 @@ Before answering these questions, we need to examine the relationship between a 
 
 + Is there a discrepancy between a rating and its associated review's sentiment?
   * Do people give good ratings even though their comment is negative?
+
 
 + How can we classify books into good, bad, and those for which there is no clear consensus?
 
@@ -127,5 +128,5 @@ The snowball effect is clear: the mean rating increases as a function of the mea
 
 # Conclusion
 
-We have seen that 
+We have seen that uncontroversiality and goodness (high mean rating) are keys to popularity of books, and that controversial books are less popular than uncontroversial ones in each goodness category. The average sentiment of an Amazon book review has remained stable and quite positive over the years 1999-2014, which is good news for those fearing for ever-increasing gloominess on the internet. The reviews themselves experience a snowball effect, where early ratings are heavily correlated with the mean rating after lots of reviews have been made.
 
