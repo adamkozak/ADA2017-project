@@ -156,7 +156,7 @@ interesting results
 
 - [x] Create a plan for presentation and poster creation
 
-# Up until presentation:
+## Up until presentation:
 
 - [ ] Create poster in required format (Everyone)
 
