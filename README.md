@@ -105,11 +105,17 @@ The vast majority of the reviews are written at the end of the time frame, from 
 
 Surprisingly, uncontroversial books gain more popularity than controversial ones in each goodness category throughout the time frame! Good books that are uncontroversial or controversy-neutral gain the most reviews, and bad books gain fewer reviews. _But, if a book is good and controversial, it will have variation in review numbers and eventually few reviews_. Answering our first research question, _How can negativeness or positiveness of reviews and ratings influence the popularity of a book?_, we can say that good books are popular, but consistently so only if they are uncontroversial or controversy-neutral. If book reviews agree with each other, a book is more popular than if there is disagreement in reviews, and this effect is stronger than the actual positivity or negativity of the reviews!
 
-# Time evolution of high and low reviews
+# Time evolution of reviews
+
+How about the mean review score over the years? Let's look at how the scaled review score and the VADER sentiment score evolve between 1999 and 2014:
 
 ![Far time evolution](Project/images/time_evo_far.png)
 
+Pretty stable. How about we cut and rescale the y-axis a bit?
+
 ![Near time evolution](Project/images/time_evo_near.png)
+
+Especially in reviewers' sentiments, there's something of a downhill from 2001 to 2005, but after that we seem to be getting more positive reviews! The stability of the score indicates that even though there is small variation, the general attitude of reviewers has not become mroe negative (even though on the internet, it might seem that we are constantly heading in a more grim and pessimistic direction in people's behavior, at least Amazon reviewers keep a constant positive note).
 
 # The snowball effect
 
