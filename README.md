@@ -14,7 +14,7 @@ User reviews on [Amazon.com](https://www.amazon.com/) are a source of interestin
 
 + Can we see a snowball effect in reviews and ratings?
 
-Before answering these questions, we need to examine the relationship between a text _review_ and its associated _rating_, define the notion of 'good' and 'bad' books, and define what it means for a book to be 'popular':
+Before answering these questions, we need to examine the relationship between a text _review_ and its associated _rating_, define the notion of 'good' and 'bad' books, and define what it means for a book to be 'popular'.
 
 **Intermediate questions:**
 
