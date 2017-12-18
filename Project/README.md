@@ -168,5 +168,5 @@ TARMO
 Readme file writing and updating, Final books classification into 6 categories, cross-section categories calculations, Data story writing.
 
 NATHALIE 
-First naïve way of classifying books into categories, Analyses using classifications for books into good/bad/controversial, Analyses using Vader results, time evolutions analyses. Readme file updating and final comments on notebook. 
+First naïve way of classifying books into categories, Analyses using classifications for books into good/bad/controversial, Analyses using Vader results, time evolutions analyses. Readme file updating and final comments on notebook. Will work on the final presentation. 
 
