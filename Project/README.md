@@ -66,7 +66,7 @@ Metric 1 just looks at the number of reviews gathered between May 1996 and July 
 We also wanted to group books into categories based on the general sentiment towards them. For this, we used the Amazon star ratings (1-5 stars, a rating and a review are always given together). We labeled the books on goodness and controversiality as follows:
 
 |  | High average rating | Neutral average rating | Low average rating |
-| :---: | :---: | :---: |
+| :---: | :---: | :---: | :---: |
 | **Low rating variance** | Good, uncontroversial book | Neutral, uncontroversial book | Bad, uncontroversial book |
 | **Neutral rating variance** | Good, neutral book | Neutral-neutral book | Bad, neutral book |
 | **High rating variance** | Good, controversial book | Neutral, controversial book | Bad, controversial book |
