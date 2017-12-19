@@ -63,12 +63,13 @@ We decided on two different definitions for a popularity metric:
 The metrics are based on the idea that a "popular" book will accrue lots of reviews, and an "unpopular" one will not. therefore, there is no judgment of the quality or goodness of the book by this notion of popularity.
 Metric 1 just looks at the number of reviews gathered between May 1996 and July 2014, and therefore favors older books that were pubished earlier (since they will have had more time to accrue reviews.) By contrast, metric 2 favors newer books, since the rate of commenting on books on Amazon is higher the closer we are to the present day in time (because of internet accessibility, etc.).
 
-We also wanted to group books into categories based on the general sentiment towards them. For this, we used the Amazon star ratings (1-5 stars, a rating and a review are always given together). We labeled the books as "good", "bad" or "controversial" as follows:
+We also wanted to group books into categories based on the general sentiment towards them. For this, we used the Amazon star ratings (1-5 stars, a rating and a review are always given together). We labeled the books on goodness and controversiality as follows:
 
-|  | High average rating | Low average rating |
+|  | High average rating | Neutral average rating | Low average rating |
 | :---: | :---: | :---: |
-| **Low rating variance** | Good book | Bad book |
-| **High rating variance** | Controversial book | Controversial book |
+| **Low rating variance** | Good, uncontroversial book | Neutral, uncontroversial book | Bad, uncontroversial book |
+| **Neutral rating variance** | Good, neutral book | Neutral-neutral book | Bad, neutral book |
+| **High rating variance** | Good, controversial book | Neutral, controversial book | Bad, controversial book |
 
 Each book with at least 10 reviews was given two classifications: goodness and controversiality. For each classification, three categories were used (good/uncontroversial, neutral/neutral, bad/controversial), resulting in a total of 9 cross-section categories (good and controversial, good and uncontroversial, good and controversy-neutral, etc.).
 
